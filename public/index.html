@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <!-- 安卓平台 chrome -->
+  <!-- <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="img/fengxian_logo@2x.png"> -->
+
+  <!-- ios平台 safari -->
+  <!-- <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="预约管理" />
+  <link rel="apple-touch-icon-precomposed" href="img/fengxian_logo@2x.png"> -->
+
+  <!-- win8以上 平台 磁贴 -->
+  <!-- <meta name="msapplication-TileImage" content="img/fengxian_logo@2x.png">
+  <meta name="msapplication-TileColor" content="#0e90d2"> -->
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+  <title>预约管理</title>
+  <!-- <title><%= htmlWebpackPlugin.options.title %></title> -->
+</head>
+
+<body>
+  <noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
+      Please enable it to continue.</strong>
+  </noscript>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+</body>
+<% if (process.env.VUE_APP_ERUDA === 'true') { %>
+<script src="//cdn.bootcss.com/eruda/1.5.2/eruda.min.js"></script>
+<script>
+  window.eruda.init();
+</script>
+<% } %>
+
+</html>
